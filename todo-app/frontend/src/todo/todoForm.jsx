@@ -15,7 +15,8 @@ export default props => (
             {/* <button className='btn btn-primary'>
                 <i className='fa fa-plus'></i>
             </button> */}
-            <IconButton style='primary' icon='plus'></IconButton>
+            <IconButton style='primary' icon='plus'
+                onClick={props.handleAdd} ></IconButton>
         </Grid>
     </div>
 )
