@@ -7,7 +7,9 @@ export default props => (
         {/* <div className='col-xs-12 col-sm-9 col-md-10'> */}
         <Grid cols='12 9 10'>
             <input id='description' className='form-control'
-                placeholder='Adicione uma tarefa'></input>
+                placeholder='Adicione uma tarefa'
+                onChange={props.handleChange}
+                value={props.description}></input>
         </Grid>
 
         {/* <div className='col-xs-12 col-sm-3 col-md-2'> */}
