@@ -4,11 +4,13 @@ import '../template/custom.css'*/
 
 import '../common/template/dependencies'
 import React from 'react'
-//import Menu from '../template/menu'
+import Header from '../common/template/header'
+import SideBar from '../common/template/sideBar'
 //import Routes from './routes'
 
 export default props => (
     <div className='wrapper'>
-        <h1>App</h1>
+        <Header />
+        <SideBar />
     </div>
 )
