@@ -11,7 +11,8 @@ const options = {
     bufferMaxEntries: 0
   };
 
-const uri = 'mongodb://localhost/mymoney'
+//const uri = 'mongodb://localhost/mymoney'
+const uri = 'mongodb://vinicius:d27m10@ds215709.mlab.com:15709/mymoney'
 
 module.exports = mongoose.connect(uri, options)
 
