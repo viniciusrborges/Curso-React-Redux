@@ -1,13 +1,14 @@
-/*import React from 'react'
+import React from 'react'
 import { Router, Route, Redirect, hashHistory } from 'react-router'
 
-import Todo from '../todo/todo'
-import About from '../about/about'
+import Dashboard from '../dashboard/dashboard'
+//import Dashboard from '../dashboard2/dashboard2'
+import BillingCycle from '../billingCycle/billingCycle'
 
 export default props => (
     <Router history={hashHistory}>
-        <Route path='/todos' component={Todo} />
-        <Route path='/about' component={About} />
-        <Redirect from='*' to='/todos' />
+        <Route path='/' component={Dashboard} />
+        <Route path='/billingCycles' component={BillingCycle} />
+        <Redirect from='*' to='/' />
     </Router>
-)/*
+)
