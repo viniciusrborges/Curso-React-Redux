@@ -14,11 +14,16 @@ export function getList() {
     }
 }
 
-/*export function create(values) {
-    return submit(values, 'post')
+export function create(values) {
+    // console.log(values)
+    // return submit(values, 'post')
+    axios.post(`${BASE_URL}/billingCycles`, values)
+    return {
+        type: 'TEMP'
+    }
 }
 
-export function update(values) {
+/*export function update(values) {
     return submit(values, 'put')
 }
 
