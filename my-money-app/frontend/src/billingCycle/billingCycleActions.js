@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import { toastr } from 'react-redux-toastr'
+import { toastr } from 'react-redux-toastr'
 // import { reset as resetForm, initialize } from 'redux-form'
 // import { showTabs, selectTab } from '../common/tab/tabActions'
 
@@ -18,6 +18,12 @@ export function create(values) {
     // console.log(values)
     // return submit(values, 'post')
     axios.post(`${BASE_URL}/billingCycles`, values)
+        .then(resp => {
+            toastr.success('Sucesso', 'Operação realizada com sucesso.')
+        })
+        .catch(e => {
+            e.response.data.errors.forEach(error => toastr.error('Erro', error))
+        })
     return {
         type: 'TEMP'
     }
